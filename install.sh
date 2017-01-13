@@ -2,7 +2,10 @@
 
 PWD=$(pwd)
 echo $PWD
+
 ln -s ${PWD} ~/.oh-my-zsh
+
+
 if [ -e ~/.zshrc ]; then
     mv ~/.zshrc ~/.zshrc_bak
 fi
@@ -19,3 +22,8 @@ if [ -e ~/.vimrc ]; then
     mv ~/.vimrc ~/.vimrc_bak
 fi
 ln -s ~/.oh-my-zsh/templates/vimrc ~/.vimrc
+
+if [ -e ~/.bashrc ]; then
+    mv ~/.bashrc ~/.bashrc_bak
+fi
+ln -s ~/.oh-my-zsh/templates/bashrc ~/.bashrc
