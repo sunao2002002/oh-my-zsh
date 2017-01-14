@@ -3,6 +3,9 @@
 PWD=$(pwd)
 echo $PWD
 
+if [ -e ~/.oh-my-zsh ];then
+    mv ~/.oh-my-zsh ~/.oh-my-zsh_bak
+fi
 ln -s ${PWD} ~/.oh-my-zsh
 
 
