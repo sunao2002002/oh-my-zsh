@@ -171,6 +171,12 @@ function retry_command()
     done
 
 }
+function mountAndroid(){
+	hdiutil attach ~/android.dmg.sparseimage -mountpoint /Volumes/android;
+}
+function unmountAndroid(){
+	hdiutil detach /Volumes/android;
+}
 function show_time()
 {
     local start_time=$(date +"%s")
